@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'Yeseva One';
+  src: url('/yeseva-one-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* White surfaces across public pages; photograph overlays keep their contrast. */
+body.velvet-site {
+  --ink: #000;
+  --muted: #000;
+  --paper: #fff;
+  --soft: #f5f3f4;
+  --rose: #000;
+  --olive: #000;
+  --gold: #000;
+  --white: #fff;
+  --studio-green: #000;
+  --studio-mint: #f5f3f4;
+  --studio-border: #ded8dc;
+  --studio-muted: #000;
+  color-scheme: light;
+  color: var(--ink);
+  background: #fff;
+}
+body.velvet-site ::selection { background: #ead8be; color: #242124; }
+body.velvet-site :is(.dream-world, .cms-main, .album-section, .collection-overview, .site-footer),
+body.velvet-site .dream-world :is(.intro, .services, .gallery-section, .wedding-overture, .contact, .packages, .process) {
+  background: #fff;
+  color: var(--ink);
+}
+body.velvet-site :is(h1, h2, h3),
+body.velvet-site .dream-world :is(h2, h3) { color: var(--ink); }
+body.velvet-site :is(h2, h3) em,
+body.velvet-site .dream-world :is(h2, h3) em { color: var(--gold); }
+body.velvet-site a { color: #000; }
+body.velvet-site a:hover { color: #000; }
+body.velvet-site .site-header,
+body.velvet-site .dream-world .site-header { background: #fffffff5; border-bottom-color: #ded8dc; }
+body.velvet-site .site-header a { color: var(--ink); }
+body.velvet-site .brand-mark { border-color: var(--gold); color: var(--gold); }
+body.velvet-site .nav-toggle span { background: var(--ink); }
+body.velvet-site .site-nav.is-open { background: #fff; border-color: #ded8dc; }
+body.velvet-site .site-footer { border-color: #ded8dc; color: var(--muted); }
+body.velvet-site .chapter-strip,
+body.velvet-site .dream-world .chapter-strip { background: #fff; color: var(--muted); border-color: #ded8dc; }
+body.velvet-site .eyebrow,
+body.velvet-site .dream-world .eyebrow,
+body.velvet-site .dream-world :is(.intro, .services, .gallery-section) .eyebrow { color: var(--gold); }
+body.velvet-site :is(.world-copy > p, .intro > p, .service-card p, .content-grid p, .collection-empty, .subtle, .empty-state, .prose, .service-details p, .privacy-page p) { color: var(--muted); }
+body.velvet-site :is(.world-image, .service-type-panel, .table-scroll, .shoot-summary),
+body.velvet-site .dream-world .service-card .service-type-panel { background: #fff; border-color: #ded8dc; }
+body.velvet-site .dream-world .service-type-panel :is(p, a) { color: #000; }
+body.velvet-site :is(.content-grid article, .collection-link, .collection-nav, .collection-overview, .inspiration-search, .faq, th, td) { border-color: #ded8dc; }
+body.velvet-site :is(.collection-nav a, .moment-nav a, .gallery-filters button),
+body.velvet-site .dream-world .gallery-filters button { color: var(--muted); }
+body.velvet-site :is(.collection-nav a[aria-current], .moment-nav a[aria-current], .gallery-filters button[aria-pressed=true]),
+body.velvet-site .dream-world .gallery-filters button[aria-pressed=true] { color: #000; border-color: #000; }
+body.velvet-site .archive-booking { background: #fff; color: var(--ink); border-top: 1px solid #ded8dc; }
+body.velvet-site :is(.form-grid, .contact, .gallery-unlock, .client-notes, .inspiration-search) label { color: var(--ink); }
+body.velvet-site :is(input:not([type=checkbox]):not([type=radio]), select, textarea),
+body.velvet-site .dream-world .contact :is(input, select, textarea) { background: #fff; color: var(--ink); border-color: #b9afb6; }
+body.velvet-site :is(input, textarea)::placeholder { color: #000; opacity: 1; }
+body.velvet-site select option { background: #fff; color: var(--ink); }
+body.velvet-site .shoot-summary dt { color: var(--muted); }
+body.velvet-site .shoot-summary dd { color: var(--ink); }
+body.velvet-site :is(.studio-button, .button.primary, .whatsapp-link),
+body.velvet-site .dream-world .button.primary { background: #71552f; color: #fff; border-color: #000; }
+body.velvet-site :is(.studio-button, .button.primary, .whatsapp-link):hover,
+body.velvet-site .dream-world .button.primary:hover { background: #503a20; color: #fff; }
+body.velvet-site :is(.outline-button, .button.secondary) { background: #fff; color: #000; border-color: #a28660; }
+body.velvet-site :is(.overture-heading > p, .planner-page > header > p, .service-page > p,
+  .collection-overview span, .archive-heading > span, .archive-toolbar > span,
+  .client-toolbar > span, .client-notes blockquote span, .steps span, .steps p,
+  .package-list p, .form-note, .booking-feedback, .client-feedback, .board-feedback,
+  .text-link, .muted-link) { color: #000; }
+body.velvet-site .dream-world .contact :is(.eyebrow, .form-note) { color: #000; }
+body.velvet-site .notice { color: #000; background: #f5eee2; }
+body.velvet-site .notice.error { color: #782c34; background: #fff0f1; }
+body.velvet-site :is(a, button, input, select, textarea, summary):focus-visible { outline-color: #000; }
+body.velvet-site .arrival {
+  --ink: #fff7ed;
+  color-scheme: dark;
+  background: #100d10;
+  color: var(--ink);
+}
+body.velvet-site .arrival-tile { background: #1e1a21; }
+body.velvet-site .arrival-brand,
+body.velvet-site .arrival-brand:hover { color: #fff7ed; }
+body.velvet-site .arrival-enter,
+body.velvet-site .arrival-enter:hover { color: #302218; }
+body.velvet-site .arrival-enter:focus-visible { outline-color: #fff7ed; }
+body.velvet-site .arrival:before { background: linear-gradient(90deg, #100d10, #29222b 85%, #927044); }
+body.velvet-site .arrival:after { background: linear-gradient(-90deg, #100d10, #29222b 85%, #927044); }
+body.velvet-site :is(.arrival-copy h1, .hero h1, .hero-scroll, .album-label h2, .album-label p, .album-label .album-open, .collection-down, .collection-cover-text, .collection-cover-text h1, .collection-cover-text p) { color: #fff7ed; }
+body.velvet-site :is(.arrival-copy h1, .hero h1) em,
+body.velvet-site .hero-content > .eyebrow { color: #f0d8b3; }
+body.velvet-site .hero .button.secondary { color: #fff7ed; background: #18141266; border-color: #f0d8b3; }
+
+/* Expressive serif titles with restrained, photograph-led details. */
+body.velvet-site :is(h1, h2, h3, .brand, .arrival-brand) {
+  font-family: 'Yeseva One', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+body.velvet-site h1,
+body.velvet-site .arrival-copy h1,
+body.velvet-site .hero h1 { font-size: clamp(48px, 6.5vw, 92px); line-height: 1.12; text-shadow: none; }
+body.velvet-site h2,
+body.velvet-site .dream-world h2 { font-size: clamp(34px, 4.3vw, 56px); line-height: 1.15; }
+body.velvet-site h3,
+body.velvet-site .dream-world h3 { font-size: clamp(28px, 2.8vw, 38px); line-height: 1.2; }
+body.velvet-site .content-grid h2 { font-size: 34px; }
+body.velvet-site .album-label h2 { font-size: clamp(34px, 3.5vw, 46px); }
+body.velvet-site .privacy-page h2 { font-size: 36px; }
+body.velvet-site :is(h1, h2, h3) em { font-family: inherit; font-style: normal; }
+body.velvet-site .brand { font-size: 32px; line-height: 1.1; white-space: nowrap; }
+body.velvet-site .brand-mark,
+body.velvet-site .dream-lights,
+body.velvet-site .dream-petals,
+body.velvet-site .chapter-strip,
+body.velvet-site .overture-heading:before,
+body.velvet-site .world-image:after,
+body.velvet-site .arrival-brand:before,
+body.velvet-site .arrival-brand:after { display: none; }
+body.velvet-site .arrival-brand { font-size: 40px; }
+body.velvet-site .arrival-brand > span { font-family: Arial, sans-serif; font-size: 9px; letter-spacing: .16em; }
+body.velvet-site .site-nav a { font-size: 12px; font-weight: 400; }
+body.velvet-site .site-header > nav a {
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+@media (min-width: 1101px) {
+  body.velvet-site .site-header .brand { font-size: 24px; }
+  body.velvet-site .site-header > nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+  }
+}
+@media (max-width: 1100px) {
+  body.velvet-site .nav-toggle { display: block; }
+  body.velvet-site .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
+    display: none;
+    width: min(320px, calc(100vw - 48px));
+    padding: 20px;
+    gap: 18px;
+    border: 1px solid #ded8dc;
+    border-radius: 0;
+    background: #fff;
+    text-align: center;
+  }
+  body.velvet-site .site-nav.is-open { display: grid; }
+  body.velvet-site .site-header > nav:not(.site-nav) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+}
+body.velvet-site :is(.button, .studio-button, .outline-button, .arrival-enter, .whatsapp-link) { border-radius: 2px; box-shadow: none; }
+body.velvet-site .arrival-enter:hover { box-shadow: none; transform: translateY(-2px); }
+body.velvet-site .hero-content { transform: none; }
+body.velvet-site .hero h1 :is(span, em),
+body.velvet-site .hero-content > .eyebrow,
+body.velvet-site .hero-content > p,
+body.velvet-site .hero-actions { animation: none; filter: none; }
+body.velvet-site .hero-preview button,
+body.velvet-site .hero-preview button:hover,
+body.velvet-site .hero-preview button[aria-pressed=true] { transform: none; }
+body.velvet-site .world-editorial { padding-top: 0; }
+body.velvet-site .world-image > span { background: #17141799; padding: 6px 9px; letter-spacing: .1em; }
+body.velvet-site .reveal { transition-duration: .55s; }
+body.velvet-site .reveal.pending { clip-path: none; transform: translateY(16px); }
+@media (max-width: 560px) {
+  body.velvet-site .brand { font-size: 28px; }
+  body.velvet-site .arrival-copy h1,
+  body.velvet-site .hero h1 { font-size: clamp(40px, 10.5vw, 56px); }
+  body.velvet-site .arrival-enter { min-height: 52px; padding: 14px 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.velvet-site .reveal.pending { transform: none; }
+}
+.social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding: 16px 0; }
+.social-links a { padding: 10px; text-underline-offset: 4px; }
+button:disabled { cursor: not-allowed; opacity: .6; }
+@media (max-width: 560px) {
+  .whatsapp-link { right: 12px; bottom: 12px; max-width: calc(100vw - 24px); }
+}
